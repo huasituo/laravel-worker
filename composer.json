@@ -1,0 +1,32 @@
+{
+    "name": "huasituo/workers",
+    "description": "Huasituo laravel worker ",
+    "keywords": ["cms", "laravel", "huasituo", "workers"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "HuaSiTuo",
+            "email": "info@huasituo.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4",
+        "workerman/gateway-worker": "^2.5",
+        "workerman/workerman": "^3.1.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Huasituo\\Workers\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Huasituo\\Workers\\WorkersServiceProvider"
+            ],
+            "aliases": {
+                "Workers": "Huasituo\\Workers\\Facades\\Workers"
+            }
+        }
+    }
+}
